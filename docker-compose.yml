@@ -25,8 +25,8 @@ x-maputnik-editor-image: &maputnik-editor-image maputnik/editor
 # of our git repo checkout.
 #
 
-  #volumes:
-    # postgis_data:
+volumes:
+    postgis_data:
 
 #
 # SERVICES
@@ -41,7 +41,7 @@ services:
       # Persistent storage of the database cluster 
       # :z needed on systems like fedora using selinux
       # when using host mounted volumes
-      - ./postgis_data:/var/lib/postgresql:z
+      - postgis_data:/var/lib/postgresql:z
     env_file: .env
     environment:
       # You can define multiple databases by providing a comma
