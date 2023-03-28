@@ -13,7 +13,7 @@ version: "3.9"
 
 # 13-3.1 is the first pg version with FORCE_SSL support
 # needed to force clients to use SSL
-x-postgres-image: &postgres-image kartoza/postgis:13-3.1
+x-postgres-image: &postgres-image kartoza/postgis:15-3.3
 x-tegola-image: &tegola-image gospatial/tegola
 x-maputnik-editor-image: &maputnik-editor-image maputnik/editor
 #
@@ -25,7 +25,7 @@ x-maputnik-editor-image: &maputnik-editor-image maputnik/editor
 # of our git repo checkout.
 #
 
-volumes:
+  #volumes:
     # postgis_data:
 
 #
